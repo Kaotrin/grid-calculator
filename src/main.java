@@ -18,26 +18,22 @@ public class main {
         System.out.println("Введите расстояние между блоками");
         y = sc.nextInt();
 
-        if ( n<= 0 ) {
-            if (y< 0) {
+        if (n <= 0) {
+            if (y < 0) {
                 System.out.println("Ошибка 1");
-                System.out.println("Ошибка 2");}
-                else
-                System.out.println("Ошибка 1");
-        }
-        else {
-            if (y<0) {
                 System.out.println("Ошибка 2");
-            }
-            else {
+            } else
+                System.out.println("Ошибка 1");
+        } else {
+            if (y < 0) {
+                System.out.println("Ошибка 2");
+            } else {
                 System.out.println("Блок равен:");
                 x = (960 - (n + 1) * y) / n;
                 System.out.println(x);
                 System.out.println("пробелы между блоками равны:");
                 System.out.println(y);
-           } }
-
-
-
+            }
         }
     }
+}
