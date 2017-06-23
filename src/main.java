@@ -20,20 +20,33 @@ public class main {
 
         if (n <= 0) {
             if (y < 0) {
-                System.out.println("Ошибка 1");
-                System.out.println("Ошибка 2");
+                printNumberOfBlocksError();
+                printDistanceError();
             } else
-                System.out.println("Ошибка 1");
+                printNumberOfBlocksError();
         } else {
             if (y < 0) {
-                System.out.println("Ошибка 2");
+                printDistanceError();
             } else {
-                System.out.println("Блок равен:");
                 x = (960 - (n + 1) * y) / n;
-                System.out.println(x);
-                System.out.println("пробелы между блоками равны:");
-                System.out.println(y);
+                printResult(y, n, x);
             }
         }
+    }
+
+    private static void printDistanceError() {
+        System.out.println("Distance between the blocks cannot be less 0.");
+    }
+
+    private static void printNumberOfBlocksError() {
+        System.out.println("Number of blocks cannot be less than 1.");
+    }
+
+
+    private static void printResult(double y, double n, double x) {
+        System.out.println("Блок равен:");
+        System.out.println(x);
+        System.out.println("пробелы между блоками равны:");
+        System.out.println(y);
     }
 }
