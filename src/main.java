@@ -31,8 +31,9 @@ public class main {
             }
             else {
                 System.out.println("Блок равен:");
-               System.out.println(x = (960 - (n + 1) * y) / n);
-               System.out.println("пробелы между блоками равны:");
+                x = (960 - (n + 1) * y) / n;
+                System.out.println(x);
+                System.out.println("пробелы между блоками равны:");
                 System.out.println(y);
            } }
 
