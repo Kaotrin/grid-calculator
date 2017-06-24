@@ -7,9 +7,10 @@ import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
 
-        double x, y, n;
 
-        System.out.println("x = блок");
+        double x, y, n, f;
+
+        System.out.println("Расчет данных для сетки ");
         System.out.println("y = пробелы между блоками");
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите колличество блоков");
@@ -17,6 +18,9 @@ public class main {
 
         System.out.println("Введите расстояние между блоками");
         y = sc.nextInt();
+
+        System.out.println("Введите общую ширину сетки");
+        f = sc.nextInt();
 
         if (n <= 0) {
             if (y < 0) {
@@ -28,7 +32,7 @@ public class main {
             if (y < 0) {
                 printDistanceError();
             } else {
-                x = (960 - (n + 1) * y) / n;
+                x = (f - (n + 1) * y) / n;
                 printResult(y, n, x);
             }
         }
